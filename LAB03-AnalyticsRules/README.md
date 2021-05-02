@@ -130,9 +130,9 @@ Your mapping should look like the above:
 	
 ![entity mapping](../Images/m3-entity01.gif?raw=true)
 
-To be to make you SOC more productive, save analyst time and affectively triage newly created incidents, your SOC analyst ask you to add the effected user in the alert title.
+To make your SOC, more productive, save analyst time and affectively triage newly created incidents, your SOC analyst ask you to add the effected user from the search results as part of the alert title.
 
-3. For applying this request, we will need to use the **Alert details** feature and create custom **alert Name Format**
+3. For applying this request, we will use the **Alert details** feature and create custom **Alert Name Format**
 
 - In the **Alert Name Format copy the above dynamic title **"Malicious Inbox Rule, affected user {{UserId__s}}"**
 
