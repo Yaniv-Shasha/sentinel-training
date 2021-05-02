@@ -26,18 +26,28 @@ To get started with Azure Sentinel, you must have a subscription to Microsoft Az
 9. This is the rule logic screen, in this screen you are able to see and modify the rule KQL query, control of the entity mapping and define the scheduling and lookback time range.
 10. Close this page and navigate back to the main azure sentinel Overview screen 
 
-### Exercise 2: enable of the Azure Sentinel 1st Analytics Rule
+### Exercise 2: Enable of the Azure Sentinel 1st Analytics Rule
 
 Azure Sentinel is a cloud-native SIEM and part of the main use cases on SIEM besides event correlation is to act as the single pane of glass.
 For this purpose, we have the Microsoft incident creation rule to be able to ingest Microsoft Security Product Alerts.
-in this exercise, we will review this feature and create one example rule that will use the reach filtring option to help the analyst to deal with alert fatigue 
+in this exercise, we will review this feature and create one example rule that will use the reach filtring option to help the analyst to deal with alert fatigue.
 
 1. In Azure Sentinel main page press on the **Analytics** section.
 2. In the top bar press on **+Create** and select **Microsoft incident creation rule**
 
 ![Select Microsoft incident creation rule](../Images/m3-microsoft-creation-rule.gif?raw=true)
 
+3. in the rule name enter **Azure Defender only medium and high Alerts** 
+4. in the **Microsoft security service** dropdown select **Azure Defender**
+5. in the **Filter by severity** select **custom** and mark **High** and **Medium**
 
+![Azure Defender Filter by severity](../Images/m3-microsoft-creation-rule02.gif?raw=true)
+
+6. Press **Next: Automated response**
+7. please notice that in the above Automated response page you can attached automation rule that will generate some automation tasks that can assist your SOC with repetitive tasks, or Security remediation. More in this topic in the SOAR module. 
+8. Press **Next: Review** and **create** in the next page.
+
+![review the azure defender rule](../Images/m3-microsoft-creation-rule03.gif?raw=true)
 
 c.	Create custom rule:
 i.	This rule will use pre-ingested data to custom logs
