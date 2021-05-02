@@ -26,7 +26,7 @@ To get started with Azure Sentinel, you must have a subscription to Microsoft Az
 9. This is the rule logic screen, in this screen you are able to see and modify the rule KQL query, control of the entity mapping and define the scheduling and lookback time range.
 10. Close this page and navigate back to the main azure sentinel Overview screen 
 
-### Exercise 2: Enable of the Azure Sentinel 1st Analytics Rule
+### Exercise 2: Enable Azure Sentinel Microsoft incident creation rule
 
 Azure Sentinel is a cloud-native SIEM and part of the main use cases on SIEM besides event correlation is to act as the single pane of glass.
 For this purpose, we have the Microsoft incident creation rule to be able to ingest Microsoft Security Product Alerts.
@@ -48,6 +48,29 @@ in this exercise, we will review this feature and create one example rule that w
 8. Press **Next: Review** and **create** in the next page.
 
 ![review the azure defender rule](../Images/m3-microsoft-creation-rule03.gif?raw=true)
+
+### Exercise 3: Review Azure Sentinel Fusion Rule (Advanced Multistage Attack Detection)
+
+Fusion rule is a unique kind of detection rule, with fusion rule 
+Azure Sentinel can automatically detect multistage attacks by identifying combinations of anomalous behaviors and suspicious activities That are observed at various stages of the kill-chain
+
+In this exercise we will learn how to distinguish and enable fusion rule  in Azure Sentinel.
+
+1. In the analytics page rule template tab, use the **Rule Type** filter and select **Fusion**
+
+![Select fustion data source](../Images/m3-fusion01.gif?raw=true)
+
+	2. In the template screen notice the tag **IN USE** as this rule is the only rule that enabled by default.
+	3. Press the rule and review the rule data sources in the right pane 
+
+![fusion description](../Images/m3-fusion02.gif?raw=true)
+
+
+As fusion rules produce security incident with high fidelity and its hard to simulate it, we are adding here example for an fusion incident 
+
+In the above example we are seeing 2 low severity alerts from **Azure Active Directory Identity Protection** and **Microsoft Cloud App Security** that together stich into high severity incidence 
+
+![fustion alert story](../Images/m3-fusion03.gif?raw=true)
 
 c.	Create custom rule:
 i.	This rule will use pre-ingested data to custom logs
