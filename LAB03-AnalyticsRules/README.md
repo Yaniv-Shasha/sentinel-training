@@ -37,38 +37,37 @@ In this exercise, we will review this feature and create one example rule twith 
 
 ![Select Microsoft incident creation rule](../Images/m3-microsoft-creation-rule.gif?raw=true)
 
-3. in the rule name enter **"Azure Defender only medium and high Alerts"** 
-4. in the **Microsoft security service** dropdown select **Azure Defender**
-5. in the **Filter by severity** select **custom** and mark **High** and **Medium**
+3. In the rule name enter **"Azure Defender only medium and high Alerts"** 
+4. In the **Microsoft security service** dropdown select **Azure Defender**
+5. In the **Filter by severity** select **custom** and mark **High** and **Medium**
 
 ![Azure Defender Filter by severity](../Images/m3-microsoft-creation-rule02.gif?raw=true)
 
 6. Press **Next: Automated response**
-7. please notice that in the above Automated response page you can attached automation rule that will generate some automation tasks that can assist your SOC with repetitive tasks, or Security remediation. More in this topic in the SOAR module. 
+7. In the above **"Automated response"** page you can attach automation rule that can generate automation tasks that can assist your SOC with repetitive tasks, or Security remediation. More in this topic in the SOAR module. 
 8. Press **Next: Review** and **create** in the next page.
 
 ![review the azure defender rule](../Images/m3-microsoft-creation-rule03.gif?raw=true)
 
 ### Exercise 3: Review Azure Sentinel Fusion Rule (Advanced Multistage Attack Detection)
 
-Fusion rule is a unique kind of detection rule, with fusion rule 
-Azure Sentinel can automatically detect multistage attacks by identifying combinations of anomalous behaviors and suspicious activities That are observed at various stages of the kill-chain
+Fusion rule is a unique kind of detection rule. With fusion rule Azure Sentinel can automatically detect multistage attacks by identifying combinations of anomalous behaviors and suspicious activities That are observed at various stages of the kill-chain.
 
-In this exercise we will learn how to distinguish and enable fusion rule  in Azure Sentinel.
+In this exercise we will learn how to distinguish and review Azure Sentinel **fusion rule** in Azure Sentinel.
 
 1. In the analytics page rule template tab, use the **Rule Type** filter and select **Fusion**
 
 ![Select fustion data source](../Images/m3-fusion01.gif?raw=true)
 
-	2. In the template screen notice the tag **IN USE** as this rule is the only rule that enabled by default.
-	3. Press the rule and review the rule data sources in the right pane 
+2. In the template screen notice the tag **IN USE** as this rule is the only rule that enabled by default.
+3. Press on the rule and review the data sources in the rule right pane.
 
 ![fusion description](../Images/m3-fusion02.gif?raw=true)
 
 
-As fusion rules produce security incident with high fidelity and its hard to simulate it, we are adding here example for an fusion incident 
+As fusion rules produce security incident with high fidelity and simulation can be challenging, we are adding an example for example incident that created from fusion detection.
 
-In the above example we are seeing 2 low severity alerts from **Azure Active Directory Identity Protection** and **Microsoft Cloud App Security** that together stich into high severity incidence 
+In the above example we are seeing 2 low severity alerts from **Azure Active Directory Identity Protection** and **Microsoft Cloud App Security** that stich together into high severity incidence:
 
 ![fustion alert story](../Images/m3-fusion03.gif?raw=true)
 
