@@ -13,17 +13,17 @@ To get started with Azure Sentinel, you must have a subscription to Microsoft Az
 
 ### Exercise 1: Overview of the Azure Sentinel Analytics Rule
 1. Open your newly created Azure sentinel instance.
-2. Navigate to analytics on the left menu and select **Rule template** section
+2. On the left menu Navigate to analytics and select **Rule template** section
 3. Review the analytics rules templates that ship with the product.
-4. On the analytics rule filter select Data sources and check security Event, review all the analytics rule that apply on this data source
+4. On the analytics rule filter select **Data sources** and check security Event, review all the analytic rules on the above data source.
 	
 ![Select Security Events](../Images/m3-securityEvent01.gif?raw=true)
 
-5. in the Rule search bar search for **Rare RDP Connections** rule name.
+5. In the rule search bar type  **Rare RDP Connections** for the rule name.
 6. To review the rule logic and possible configuration options, in the right lower corner press **create rule** 
-7. Review the mapping tactics and severity, please notice that this open are configurable and you can align it to your organization requirement.
-8. Press 88Nexr: Set rule logic** in the button of the page 
-9. This is the rule logic screen, in this screen you are able to see and modify the rule KQL query, control of the entity mapping and define the scheduling and lookback time range.
+7. Review tule defintion like  tactics and severity.
+8. Press **Next: Set rule logic** in the bottom of the page 
+9. in the rule logic screen, you are able to create or modify the rule KQL query, control of the entity mapping and define the scheduling and lookback time range.
 10. Close this page and navigate back to the main azure sentinel Overview screen 
 
 ### Exercise 2: Enable Azure Sentinel Microsoft incident creation rule
