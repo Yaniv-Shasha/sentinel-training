@@ -15,7 +15,7 @@ To get started with Azure Sentinel, you must have a subscription to Microsoft Az
 1. Open your newly created Azure sentinel instance.
 2. Navigate to analytics on the left menu and select **Rule template** section
 3. Review the analytics rules templates that ship with the product.
-4. On the analytics rule filterת select Data sources and check security Event, review all the analytics rule that apply on this data source
+4. On the analytics rule filter select Data sources and check security Event, review all the analytics rule that apply on this data source
 	
 ![Select Security Events](../Images/m3-securityEvent01.gif?raw=true)
 
