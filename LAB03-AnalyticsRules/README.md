@@ -59,13 +59,13 @@ In this exercise we will learn how to distinguish and review Azure Sentinel **fu
 
 ![Select fustion data source](../Images/m3-fusion01.gif?raw=true)
 
-2. In the template screen notice the tag **IN USE** as this rule is the only rule that enabled by default.
+2. In the template screen notice the tag **IN USE** as this rule template enabled by default.
 3. Press on the rule and review the data sources in the rule right pane.
 
 ![fusion description](../Images/m3-fusion02.gif?raw=true)
 
 
-As fusion rules produce security incident with high fidelity and simulation can be challenging, we are adding an example for example incident that created from fusion detection.
+As fusion rules produce security incidents with high fidelity and simulation can be challenging, we are adding an example for example incident that created from fusion detection.
 
 In the above example we are seeing 2 low severity alerts from **Azure Active Directory Identity Protection** and **Microsoft Cloud App Security** that stich together into high severity incidence:
 
@@ -90,6 +90,8 @@ In this exercise you will use Azure sentinel analytics rule wizard to create new
 	| distinct Operation_s
     ```
 - As you can see the **New-Mailbox** operation is indeed captures in your index.
+
+![fustion alert story](../Images/m3-distinct_Events.gif?raw=true)
 
 3. In the analytics rule page,  in the top bar press on **+Create** and select  **scheduled query Rule**
 4. In this screen we will add general information regarding this rule 
