@@ -148,7 +148,7 @@ To make your SOC, more productive, save analyst time and affectively triage newl
 
 
  	
-### Exercise 3: Create Azure sentinel custom analytics rule.
+### Exercise 4: Review the produce Security incident.
 	
 After we created the custom analytics rule that detect us for  malicious inbox rule rules.
 Let's review the incident that6 created from this analytics rule.
@@ -162,7 +162,8 @@ Let's review the incident that6 created from this analytics rule.
 ![entity mapping](../Images/m3incident_pane.gif?raw=true)
 
 5. In the incident full details page you are able to see alert timeline (effective when you have more than one alert in a given incident)
+6. Check the top level tabs and press on the entity tab, this section will expose all the mapped entities that related to this incident.
  
+![entity mapping](../Images/m3-incident_entity.gif?raw=true)
 
-
-
+7. press on the entity **"AdeleV@contoso.OnMicrosoft.com"** this action will navigate us to the user entity page, this page will give us holistic view on the user entity, with all its activity and related alerts.
