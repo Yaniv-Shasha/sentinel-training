@@ -134,7 +134,7 @@ To make your SOC, more productive, save analyst time and affectively triage newl
 
 3. For applying this request, we will use the **Alert details** feature and create custom **Alert Name Format**
 
-- In the **Alert Name Format copy the above dynamic title **"Malicious Inbox Rule, affected user {{UserId__s}}"**
+- In the **Alert Name Format** copy the above dynamic title **"Malicious Inbox Rule, affected user {{UserId__s}}"**
 
 4. In the **Query scheduling** set the **run query every** to **5 minutes** and the **Lookup data to last 12 Hours** (This scheduling are not ideal for production environment and should be tune).
 5. In the **Suppression** leave it on **Off**
@@ -147,7 +147,19 @@ To make your SOC, more productive, save analyst time and affectively triage newl
 8. Press the **Next: Automated response** and also press **Next:Review** and create this newly analytics rule.
 
 
- 
+ 	
+### Exercise 3: Create Azure sentinel custom analytics rule.
+	
+After we created the custom analytics rule that detect us for  malicious inbox rule rules.
+Let's review the incident that6 created from this analytics rule.
+	
+1. On the main Azure Sentinel main page, select **incidents** and review the incident page
+2. Locate a new incident with title **"Malicious Inbox Rule, affected user AdeleV@contoso.OnMicrosoft.com"** notice that the name adapt and the effected user name added to the incident name.
+3. In the right pane we can review the incident preview, this view will gave us high level overview on the incident and the entity that related to it.
+
+4. Press on the **"view full detalis** 
+
+![entity mapping](../Images/m3incident_pane.gif?raw=true)
 
 
 
