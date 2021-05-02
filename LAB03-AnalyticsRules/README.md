@@ -157,10 +157,12 @@ Let's review the incident that6 created from this analytics rule.
 2. Locate a new incident with title **"Malicious Inbox Rule, affected user AdeleV@contoso.OnMicrosoft.com"** notice that the name adapt and the effected user name added to the incident name.
 3. In the right pane we can review the incident preview, this view will gave us high level overview on the incident and the entity that related to it.
 
-4. Press on the **"view full detalis** 
+4. Press on the **"view full details** 
 
 ![entity mapping](../Images/m3incident_pane.gif?raw=true)
 
+5. In the incident full details page you are able to see alert timeline (effective when you have more than one alert in a given incident)
+ 
 
 
 
