@@ -5,7 +5,7 @@
 
 ## Objectives
 
-This exercise guides you through the Analytics Rule part in Azure Sentinel, and shows you How to create diffrent type of rules(Security Detections)
+This exercise guides you through the Analytics Rule part in Azure Sentinel, and shows you how to create diffrent type of rules (Security Detections)
 
 #### Prerequisites
 
@@ -13,24 +13,24 @@ To get started with Azure Sentinel, you must have a subscription to Microsoft Az
 
 ### Exercise 1: Overview of the Azure Sentinel Analytics Rule
 1. Open your newly created Azure sentinel instance.
-2. On the left menu Navigate to analytics and select **Rule template** section
+2. On the left menu navigate to analytics and select **Rule template** section
 3. Review the analytics rules templates that ship with the product.
-4. On the analytics rule filter select **Data sources** and check security Event, review all the analytic rules on the above data source.
+4. On the analytics rule filter select **Data sources** and check **security Event**, review all the analytic rules on the above data source.
 	
 ![Select Security Events](../Images/m3-securityEvent01.gif?raw=true)
 
 5. In the rule search bar type  **Rare RDP Connections** for the rule name.
 6. To review the rule logic and possible configuration options, in the right lower corner press **create rule** 
-7. Review tule defintion like  tactics and severity.
+7. Review the rule defintion like tactics and severity.
 8. Press **Next: Set rule logic** in the bottom of the page 
-9. in the rule logic screen, you are able to create or modify the rule KQL query, control of the entity mapping and define the scheduling and lookback time range.
-10. Close this page and navigate back to the main azure sentinel Overview screen 
+9. in the rule logic screen, you have the ability to create or modify the rule KQL query, control of the entity mapping and define the scheduling and lookback time range.
+10. After you reviewwd the rule configuration options, close this page and navigate back to the main azure sentinel Overview screen 
 
 ### Exercise 2: Enable Azure Sentinel Microsoft incident creation rule
 
-Azure Sentinel is a cloud-native SIEM and part of the main use cases on SIEM besides event correlation is to act as the single pane of glass.
-For this purpose, we have the Microsoft incident creation rule to be able to ingest Microsoft Security Product Alerts.
-in this exercise, we will review this feature and create one example rule that will use the reach filtring option to help the analyst to deal with alert fatigue.
+Azure Sentinel is a cloud-native SIEM and one of the main use cases is to act as  single pane of glass, for alerts and event correlation. 
+For this purpose, and to be able to ingest and surafce Alewrts from Microsoft Security Product Alerts, we create t he we have the **Microsoft incident creation rule**
+In this exercise, we will review this feature and create one example rule twith a filtring option to help the analyst deal with alert fatigue.
 
 1. In Azure Sentinel main page press on the **Analytics** section.
 2. In the top bar press on **+Create** and select **Microsoft incident creation rule**
