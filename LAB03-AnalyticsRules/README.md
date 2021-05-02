@@ -19,7 +19,7 @@ To get started with Azure Sentinel, you must have a subscription to Microsoft Az
 	3. Review the analytics rules templates that ship with the product.
 	4. On the analytics rule filter select Data sources and check security Event, review the rules that waiting to be enable from this data source.
 	
-<p align="left"><img src="..Images/m3-securityEvent01.gif?raw=true"></p>
+<p align="left"><img src="../Images/m3-securityEvent01.gif?raw=true"></p>
 
 c.	Create custom rule:
 i.	This rule will use pre-ingested data to custom logs
