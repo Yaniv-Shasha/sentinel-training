@@ -72,13 +72,36 @@ In the above example we are seeing 2 low severity alerts from **Azure Active Dir
 
 ![fustion alert story](../Images/m3-fusion03.gif?raw=true)
 
-c.	Create custom rule:
-i.	This rule will use pre-ingested data to custom logs
-ii.	Will go through all steps. Basics, KQL query, mapping entities, scheduling, attach playbook 
-iii.	We will provide the query for the analytic rule, so it triggers immediately
-The rule name can be “Malicious Inbox Rule”
+### Exercise 3: Create Azure sentinel custom analytics rule
 
-The query:
+You Security Risk consult notify this online thread https://www.reddit.com/r/sysadmin/comments/7kyp0a/recent_phishing_attempts_my_experience_and_what/
+Base on the attack vector and the organization risk he recommend you to create detection rule for this malicious activity.
+In this exercise you will use Azure sentinel analytics rule wizard to create new detection.
+
+1. Review the article in the above link and understand what is the data source that will be part of the detection.
+2. Check if this operation are capture as part of your collection strategy:
+- In the left menu press on the **Logs** and navigate to the search canvas
+
+**important note: in this lab we are using custom logs that replace the Out-off-the-box tables** 
+
+- Run the above search query to see the list of operation Azure sentinel cupture in the last 24hr 
+	
+    ```powershell
+	OfficeActivity_CL
+	| distinct Operation_s
+    ```
+- As you can see the **New-Mailbox** operation is indeed captures in your index.
+
+3. In the analytics rule page,  in the top bar press on **+Create** and select  **scheduled query Rule**
+4. In this screen we will add general information regarding this rule 
+5. In the **Name** type **Malicious Inbox Rule - custom**
+6. In the rule **Description** type **This rule is detecting on delete all traces of phishing email from user mailboxes**
+7. In the **Tactics** select **Persistence** and **Defense Evasion**
+8. In the rule **severity**  select **medium**
+9. Press **Next: SET rule logic**
+10. In the **Rule logic** page, review and copy the above query
+
+ ```powershell
 let Keywords = dynamic(["helpdesk", " alert", " suspicious", "fake", "malicious", "phishing", "spam", "do not click", "do not open", "hijacked", "Fatal"]);
 OfficeActivity_CL
 | where Operation_s =~ "New-InboxRule"
@@ -94,24 +117,36 @@ or SubjectOrBodyContainsWords has_any (Keywords)
 | extend Keyword = iff(isnotempty(SubjectContainsWords), SubjectContainsWords, (iff(isnotempty(BodyContainsWords),BodyContainsWords,SubjectOrBodyContainsWords )))
 | extend RuleDetail = case(OfficeObjectId_s contains '/' , tostring(split(OfficeObjectId_s, '/')[-1]) , tostring(split(OfficeObjectId_s, '\\')[-1]))
 | summarize count(), StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated) by  Operation_s, UserId__s, ClientIPAddress, ResultStatus_s, Keyword, OriginatingServer_s, OfficeObjectId_s, RuleDetail
-| extend timestamp = StartTimeUtc,  IPCustomEntity = ClientIPAddress, AccountCustomEntity = UserId__s, HostCustomEntity =  OriginatingServer_s
+  ```
 
-Mapping 
+11. To view ahead your incident creation prediction, check the right side press the **Test with current data** and see the number of hits.
+12. Under the **Alert enrichment (Preview)**, under entity mapping section we will need to map our filed to well-known buckets
+	- In the **Entity type** open the supported list of entities and select **Account** in the identifier select **FullName** and map it to **UserId__s**
+	- Press **+ Add new entity** and this time select **Host** entity in the identifier select **FullName** and map it to **OriginatingServer_s**
+	- Select  **Address** and map it to **ClientIPAddress** value.
 
- 
+Your mapping should look like the above:
+	
+![entity mapping](../Images/m3-entity01.gif?raw=true)
 
-We can add dynamic title (currently under feature flag ) Malicious Inbox Rule in  {{AccountCustomEntity}} mailbox
-Malicious Inbox Rule in  {{AccountCustomEntity}} mailbox
+To be to make you SOC more productive, save analyst time and affectively triage newly created incidents, your SOC analyst ask you to add the effected user in the alert title.
 
- 
-Scheduling:
-Run every 5 min
-Lookback 24hr
+3. For applying this request, we will need to use the **Alert details** feature and create custom **alert Name Format**
 
-Suppression:
-Stop running after alert is generated: ON
+- In the **Alert Name Format copy the above dynamic title **Malicious Inbox Rule, affected user {{
+	Account}}**
 
-Incident should look:
+4. In the **Query scheduling** set the **run query every** to **5 minutes** and the **Lookup data to last 12 Hours** (This scheduling are not ideal for production environment and should be tune.
+5. In the **Suppression** leave it on **Off**
+6. Press the **Next:Incident settings(Preview)** 
+7. As our SOC is under stuff and we will need to reduce the number of alerts and be sure that when analyst handle on specific incident He will see all related events or other incidents related to the same attack story, we  will **implement Alert grouping** feature: 
+	
+- In the **Incident settings (Preview)** under **Alert grouping** change it to **Enabled**
+- Modify the **Limit the group to alerts created within the selected time frame** to **12 hours**
+- Select the **Grouping alerts into a single incident if the selected entity types and details matches** and select the Account
+8. Press the **Next: Automated response** and also press **Next:Review** and create this newly analytics rule
+
+
  
 
 
