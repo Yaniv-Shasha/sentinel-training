@@ -94,12 +94,12 @@ In this exercise you will use Azure sentinel analytics rule wizard to create new
 ![fustion alert story](../Images/m3-distinct_Events.gif?raw=true)
 
 3. In the analytics rule page,  in the top bar press on **+Create** and select  **scheduled query Rule**
-4. In this screen we will add general information regarding this rule 
-5. In the **Name** type **Malicious Inbox Rule - custom**
-6. In the rule **Description** type **This rule is detecting on delete all traces of phishing email from user mailboxes**
-7. In the **Tactics** select **Persistence** and **Defense Evasion**
-8. In the rule **severity**  select **medium**
-9. Press **Next: SET rule logic**
+4. In this screen we will add general information regarding this rule.
+5. In the **Name** type **"Malicious Inbox Rule - custom"**.
+6. In the rule **Description** add **This rule is detecting on delete all traces of phishing email from user mailboxes**.
+7. In the **Tactics** select **Persistence** and **Defense Evasion**.
+8. In the rule **severity**  select **medium**.
+9. Press **Next: SET rule logic**.
 10. In the **Rule logic** page, review and copy the above query
 
  ```powershell
