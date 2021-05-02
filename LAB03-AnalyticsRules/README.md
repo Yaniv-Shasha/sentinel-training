@@ -136,15 +136,15 @@ To make your SOC, more productive, save analyst time and affectively triage newl
 
 - In the **Alert Name Format copy the above dynamic title **"Malicious Inbox Rule, affected user {{UserId__s}}"**
 
-4. In the **Query scheduling** set the **run query every** to **5 minutes** and the **Lookup data to last 12 Hours** (This scheduling are not ideal for production environment and should be tune.
+4. In the **Query scheduling** set the **run query every** to **5 minutes** and the **Lookup data to last 12 Hours** (This scheduling are not ideal for production environment and should be tune).
 5. In the **Suppression** leave it on **Off**
 6. Press the **Next:Incident settings(Preview)** 
-7. As our SOC is under stuff and we will need to reduce the number of alerts and be sure that when analyst handle on specific incident He will see all related events or other incidents related to the same attack story, we  will **implement Alert grouping** feature: 
-	
-- In the **Incident settings (Preview)** under **Alert grouping** change it to **Enabled**
-- Modify the **Limit the group to alerts created within the selected time frame** to **12 hours**
-- Select the **Grouping alerts into a single incident if the selected entity types and details matches** and select the Account
-8. Press the **Next: Automated response** and also press **Next:Review** and create this newly analytics rule
+7. As your SOC is under stuff and we want to reduce the number of alerts and be sure that when analyst handle a specific incident, he Will see all related events or other incidents related to the same attack story, for that we will **implement Alert grouping** feature. to do so, follow the above steps: 
+
+- In the **Incident settings (Preview)** under **Alert grouping** change it to **Enabled**.
+- Modify the **Limit the group to alerts created within the selected time frame** to **12 hours**.
+- Select the **Grouping alerts into a single incident if the selected entity types and details matches** and select the Account.
+8. Press the **Next: Automated response** and also press **Next:Review** and create this newly analytics rule.
 
 
  
