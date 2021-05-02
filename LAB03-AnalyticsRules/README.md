@@ -120,8 +120,8 @@ or SubjectOrBodyContainsWords has_any (Keywords)
 | summarize count(), StartTimeUtc = min(TimeGenerated), EndTimeUtc = max(TimeGenerated) by  Operation_s, UserId__s, ClientIPAddress, ResultStatus_s, Keyword, OriginatingServer_s, OfficeObjectId_s, RuleDetail
   ```
 
-11. To view ahead your incident creation prediction, check the right side press the **Test with current data** and see the number of hits.
-12. Under the **Alert enrichment (Preview)**, under entity mapping section we will need to map our filed to well-known buckets
+11. we can view the rule creation estimatin by pressing **Test with current data** in the right side and see the number of hits.
+12. Under the **Alert enrichment (Preview)**, expend the entity mapping section that will need to map our filed to well-known buckets
 	- In the **Entity type** open the supported list of entities and select **Account** in the identifier select **FullName** and map it to **UserId__s**
 	- Press **+ Add new entity** and this time select **Host** entity in the identifier select **FullName** and map it to **OriginatingServer_s**
 	- Select  **Address** and map it to **ClientIPAddress** value.
