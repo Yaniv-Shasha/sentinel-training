@@ -11,15 +11,33 @@ This exercise guides you through the Analytics Rule part in Azure Sentinel, and 
 
 To get started with Azure Sentinel, you must have a subscription to Microsoft Azure. If you do not have a subscription, you can sign up for a free account.
 
-### Exercise 1: Understanding Azure Sentinel Analytics Rule
-
-
-	1. Open your newly created Azure sentinel instance.
-	2. Navigate to analytics and select rule template section
-	3. Review the analytics rules templates that ship with the product.
-	4. On the analytics rule filter select Data sources and check security Event, review the rules that waiting to be enable from this data source.
+### Exercise 1: Overview of the Azure Sentinel Analytics Rule
+1. Open your newly created Azure sentinel instance.
+2. Navigate to analytics on the left menu and select **Rule template** section
+3. Review the analytics rules templates that ship with the product.
+4. On the analytics rule filterת select Data sources and check security Event, review all the analytics rule that apply on this data source
 	
-<p align="left"><img src="../Images/m3-securityEvent01.gif?raw=true"></p>
+![Select Security Events](../Images/m3-securityEvent01.gif?raw=true)
+
+5. in the Rule search bar search for **Rare RDP Connections** rule name.
+6. To review the rule logic and possible configuration options, in the right lower corner press **create rule** 
+7. Review the mapping tactics and severity, please notice that this open are configurable and you can align it to your organization requirement.
+8. Press 88Nexr: Set rule logic** in the button of the page 
+9. This is the rule logic screen, in this screen you are able to see and modify the rule KQL query, control of the entity mapping and define the scheduling and lookback time range.
+10. Close this page and navigate back to the main azure sentinel Overview screen 
+
+### Exercise 2: enable of the Azure Sentinel 1st Analytics Rule
+
+Azure Sentinel is a cloud-native SIEM and part of the main use cases on SIEM besides event correlation is to act as the single pane of glass.
+For this purpose, we have the Microsoft incident creation rule to be able to ingest Microsoft Security Product Alerts.
+in this exercise, we will review this feature and create one example rule that will use the reach filtring option to help the analyst to deal with alert fatigue 
+
+1. In Azure Sentinel main page press on the **Analytics** section.
+2. In the top bar press on **+Create** and select **Microsoft incident creation rule**
+
+![Select Microsoft incident creation rule](../Images/m3-microsoft-creation-rule.gif?raw=true)
+
+
 
 c.	Create custom rule:
 i.	This rule will use pre-ingested data to custom logs
