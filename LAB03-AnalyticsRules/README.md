@@ -133,8 +133,7 @@ To be to make you SOC more productive, save analyst time and affectively triage 
 
 3. For applying this request, we will need to use the **Alert details** feature and create custom **alert Name Format**
 
-- In the **Alert Name Format copy the above dynamic title **Malicious Inbox Rule, affected user {{
-	Account}}**
+- In the **Alert Name Format copy the above dynamic title **"Malicious Inbox Rule, affected user {{UserId__s}}"**
 
 4. In the **Query scheduling** set the **run query every** to **5 minutes** and the **Lookup data to last 12 Hours** (This scheduling are not ideal for production environment and should be tune.
 5. In the **Suppression** leave it on **Off**
