@@ -73,7 +73,7 @@ In the above example we are seeing 2 low severity alerts from **Azure Active Dir
 
 ### Exercise 3: Create Azure sentinel custom analytics rule
 
-You Security Risk consult notify this online thread https://www.reddit.com/r/sysadmin/comments/7kyp0a/recent_phishing_attempts_my_experience_and_what/
+Your Security consult notify you about this thread https://www.reddit.com/r/sysadmin/comments/7kyp0a/recent_phishing_attempts_my_experience_and_what/
 Base on the attack vector and the organization risk he recommend you to create detection rule for this malicious activity.
 In this exercise you will use Azure sentinel analytics rule wizard to create new detection.
 
