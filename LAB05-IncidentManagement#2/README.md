@@ -6,17 +6,12 @@
 This exercise guides you through the SOC Analyst objects and Rule and train you how to use Azure sentinel tools and features in an incident response drill.
 
 #### Prerequisites
-
 This module relay on completing LAB01-Setup part, as the data and the artifacts that we will be using in this module need to be deployed on your sentinel instance.
-
-### Exercise 1: Review Azure Sentinel incident tools and capabilties
-
+### Exercise 1: Review Azure Sentinel incident tools and capabilities
 As a SOC analyst the entry point to consume Security incidents(tickets) in Sentinel is the Incident page.
-
-1.	in the left navigation menu press on the incident and open the incident page.
-this page will show by defuualt all the open incident in the last 24hr.
-
-2. When we want to change the time window, present only incident from spesifiec severty or to see also closed incident, we can use the filters bar
+1.  in the left navigation menu press on the incident and open the incident page.
+this page will show by default all the open incident in the last 24hr.
+2. When we want to change the time window, present only incident from specific severity or to see also closed incident, we can use the filters bar
 
 
 ![Select Microsoft incident creation rule](../Images/m5-incident-filter.gif?raw=true)
