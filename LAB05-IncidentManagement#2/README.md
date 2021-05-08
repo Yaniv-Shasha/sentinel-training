@@ -95,15 +95,16 @@ in a real life SOC this operation will run automatically, but for this lab we wa
 
 19. As the red team exercise discovered by us, the SOC manager ask us to add this IP to the whitelisting IP's, that we will not trigger incident on it any more.
 
-21. On the main incident page, select the relevant incident and press **Actions - > Create automation Rule**
+20. On the main incident page, select the relevant incident and press **Actions - > Create automation Rule**
 
 ![Select Microsoft incident creation rule](../Images/m5-automation.gif?raw=true)
 
-22. in the new screen, we will see all the incident identifiers ( the IP, and the specific Analytics rule), as the Red Team exercise will finish in 48 hr., adapt the rule expiration till the end of the drill, and press **Apply** 
+21. in the new screen, we will see all the incident identifiers ( the IP, and the specific Analytics rule), as the Red Team exercise will finish in 48 hr., adapt the rule expiration till the end of the drill, and press **Apply**.
 
 ![Select Microsoft incident creation rule](../Images/m5-automation02.gif?raw=true)
 
-23. As this incident concider as benign, we go back to the main incident page, and close the incident with the right classifiction.
+
+22. As this incident concider as benign, we go back to the main incident page, and close the incident with the right classifiction.
 
 ![Select Microsoft incident creation rule](../Images/M5-close-incident.gif?raw=true)
 M5-close-incident
