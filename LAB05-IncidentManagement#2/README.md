@@ -50,6 +50,10 @@ we have 2 opetion to open the workbook:
 
 ![Select Microsoft incident creation rule](../Images/m5-select_events.gif?raw=true)
 
+7. in raw log search, expend the recived evant and review the column and data we reviwed, this properties will help us to decide if this incident is correlated to other events.
+in the events we are seeing the effected user and the suspicious IP address.
+
+![Select Microsoft incident creation rule](../Images/m5-evidence.gif?raw=true)
 
 c.	Move to Workbooks and save the Investigation Insights workbook 
 d.	Use entity investigation and add IP address from incident
