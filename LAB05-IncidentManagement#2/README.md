@@ -41,12 +41,12 @@ we have 2 opetion to open the workbook:
 
 ### Exercise 2: handling Incident **"Sign-ins from IPs that attempt sign-ins to disabled accounts"**
 
-a.	Open Azure Aentiel incident page.
-b.	Locate the incident **"Sign-ins from IPs that attempt sign-ins to disabled accounts"**
-c.  Press on the incident and look on the right pane for the incident preview, please notcie that in this pane we are surfcing the incident eneities that belong this incident.
-d. Take ownership on the incident and change its status to **Active**
-e. Navigate to incidsrnt full details by pressing **View full details** and execute playbook to bring Geo IP data (user will notice tags being added). IP should be public IP.
-f. navigate to the **Alerts** tab and press the number of **Events** this action will redirect you to Raw logs that will present the alert evidence to support the investigation 
+1. Open Azure Aentiel incident page.
+2. Locate the incident **"Sign-ins from IPs that attempt sign-ins to disabled accounts"**
+3. Press on the incident and look on the right pane for the incident preview, please notcie that in this pane we are surfcing the incident eneities that belong this incident.
+4. Take ownership on the incident and change its status to **Active**
+5. Navigate to incidsrnt full details by pressing **View full details** and execute playbook to bring Geo IP data (user will notice tags being added). IP should be public IP.
+6. navigate to the **Alerts** tab and press the number of **Events** this action will redirect you to Raw logs that will present the alert evidence to support the investigation 
 
 ![Select Microsoft incident creation rule](../Images/m5-select_events.gif?raw=true)
 
