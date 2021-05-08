@@ -24,7 +24,7 @@ on the right page change the unassigned to "Assign to me" and also change the st
  
 ![Select Microsoft incident creation rule](../Images/m5-assigen_ticket.gif?raw=true)
 
-5. Another way to consume incidents and also to have high level view on the SOC health is through the Security Operations Efficiency Workbookץ ()
+5. Another way to consume incidents and also get high level view on the general SOC health is through the Security Operations Efficiency Workbook(we will have separated module on workbook)
 
 b.	Navigate to full details and execute playbook to bring Geo IP data (user will notice tags being added). IP should be public IP.
 c.	Move to Workbooks and save the Investigation Insights workbook 
