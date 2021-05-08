@@ -50,10 +50,22 @@ we have 2 opetion to open the workbook:
 
 ![Select Microsoft incident creation rule](../Images/m5-select_events.gif?raw=true)
 
-7. in raw log search, expend the recived evant and review the column and data we reviwed, this properties will help us to decide if this incident is correlated to other events.
-in the events we are seeing the effected user and the suspicious IP address.
+7. In raw log search, expend the received event and review the column and data we received, this properties will help us to decide if this incident is correlated to other events.
 
 ![Select Microsoft incident creation rule](../Images/m5-evidence.gif?raw=true)
+
+8. To get more context for this IP, we want to add GEO IP enrichment.
+in a real life SOC this operation will run automatically, but for this lab we want you to run it manually.
+ - Navigate back to the incident full page to the alert tab and scroll to the right
+
+![Select Microsoft incident creation rule](../Images/m5-NAV_incident.gif?raw=true)
+
+- To view the relevant automation that will assist us with the enrichment opertion, Press **view playbook**
+
+![Select Microsoft incident creation rule](../Images/m5-view_playbooks.gif?raw=true)
+
+
+
 
 c.	Move to Workbooks and save the Investigation Insights workbook 
 d.	Use entity investigation and add IP address from incident
