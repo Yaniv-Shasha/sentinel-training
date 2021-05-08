@@ -68,19 +68,19 @@ in a real life SOC this operation will run automatically, but for this lab we wa
 
 10. Navigate back to the main incident page and notice to new tags that added to the incident.
 
-![Select Microsoft incident creation rule](../Images/m5-tags-incident?raw=true)
+![Select Microsoft incident creation rule](../Images/m5-tags-incident.gif?raw=true)
 
 ** **Bonus** : Open the resource group for Sentinel deployment, locate the playbook and look on the last playbook run to review the execution steps.
 
 11. As this enrichment informaiton add your concern, you want to check what elase this IP doing in your network, for this investigation you want to use the investigation workbook.
 12. In the left navigation press **Workbooks** and select **MY Workbooks** 
 
-![Select Microsoft incident creation rule](../Images/m5-my-workbooks?raw=true)
+![Select Microsoft incident creation rule](../Images/m5-my-workbooks.gif?raw=true)
 
 13. To open the **Investigation Insights - sentinel-training-ws** saved Workbook, in the right page press **View saved workbook**
 14. validate that in the properties selector, your worksapce is set on **sentinel-training-ws** and the subscription is the sub that hoest azure sentinel Lab.
 
-![Select Microsoft incident creation rule](../Images/m5-workbook-validator?raw=true)
+![Select Microsoft incident creation rule](../Images/m5-workbook-validator.gif?raw=true)
 
 
 
