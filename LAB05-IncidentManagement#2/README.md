@@ -103,7 +103,7 @@ in a real life SOC this operation will run automatically, but for this lab we wa
 
 ![Select Microsoft incident creation rule](../Images/m5-automation02.gif?raw=true)
 
-20. As this incident concider as benign, we go back to the main incident page, and close the incident with the right classifiction.
+23. As this incident concider as benign, we go back to the main incident page, and close the incident with the right classifiction.
 
 ![Select Microsoft incident creation rule](../Images/M5-close-incident.gif?raw=true)
 M5-close-incident
