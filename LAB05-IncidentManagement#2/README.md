@@ -26,6 +26,18 @@ on the right page change the unassigned to "Assign to me" and also change the st
 
 5. Another way to consume incidents and also get high level view on the general SOC health is through the Security Operations Efficiency Workbook(we will have separated module on workbook)
 
+we have 2 opetion to open the workbook:
+
+- Through the top navigation, this will open the workbook general view, we overall statistics on the incidents.
+
+![Select Microsoft incident creation rule](../Images/m5-SecurityOperationsEfficiency.gif?raw=true)
+
+- Through the incident itself, that will open the same workbook on a different tab, and present the information and lifecycle for the given incident. 
+
+![Select Microsoft incident creation rule](../Images/m5-SecurityOperationsEfficiency_incident.gif?raw=true)
+
+6. review the dashbaord elemants 
+
 b.	Navigate to full details and execute playbook to bring Geo IP data (user will notice tags being added). IP should be public IP.
 c.	Move to Workbooks and save the Investigation Insights workbook 
 d.	Use entity investigation and add IP address from incident
