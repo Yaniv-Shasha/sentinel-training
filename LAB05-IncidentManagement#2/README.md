@@ -82,12 +82,27 @@ in a real life SOC this operation will run automatically, but for this lab we wa
 
 ![Select Microsoft incident creation rule](../Images/m5-workbook-validator.gif?raw=true)
 
+15. As the subject of the investigation is the suspicious IP from North Koriea. we want to see all the activity done by this IP
+ so in the properties selector, switch on the **investigate by** to Entity.
+
+ 16. in the **Investigate IP Address** Tab, add the suspicious IP.
+
+![Select Microsoft incident creation rule](../Images/m5-investigation-IP.gif?raw=true)
+
+17. Under the activity Detail we see many successful logins from this IP with the user Adele, and also some failed logins to disabled account from last day/hours
+
+18. We copy the User adelev@m365x816222.onmicrosoft.com and validate it in our internal HR system, from the information we collected its seems that Adele is part of the security Red team, and this suspicious is part of the exercise
+
+19. As the red team exercise discovered by us, the SOC manager ask us to add this IP to the whitelisting IP's, that we will not trigger incident on it any more.
+
+21. On the main incident page, select the relevant incident and press 
+
+![Select Microsoft incident creation rule](../Images/m5-automation.gif?raw=true)
 
 
+20. As this incident concider as benign, we go back to the main incident page, and close the incident with the right classifiction.
 
-c.	Move to Workbooks and save the Investigation Insights workbook 
-d.	Use entity investigation and add IP address from incident
-e.	This should show many successful logins from this IP and a known user email, but also some failed logins to disabled account from last day/hours 
-f.	Call/email user and confirm that this is part of red team exercise
-g.	Go back to incident queue and create automation rule from incident view to automatically close similar incidents for the affected IP address during the timeframe the red team exercise is active
+![Select Microsoft incident creation rule](../Images/M5-close-incident.gif?raw=true)
+M5-close-incident
+
 
